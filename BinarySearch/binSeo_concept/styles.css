@@ -1,0 +1,112 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #141C3A;
+  
+  font-family: 'Nunito Sans', sans-serif;
+  height: auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-img {
+  margin: 0 auto;
+  display: none;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.interactive-img:first-child {
+  display: inline-block;
+}
+
+.progress-container {
+  max-width: 80%;
+  margin: 10px auto;
+}
+
+.progress {
+  flex-basis: auto;
+  height: 6px;
+  background-color: #757F97;
+}
+
+#bar {
+  width: 1%;
+  height: 6px;
+  background-color: white;
+  content: ''
+}
+
+#navigation {
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  background-color: transparent;
+  height: 40px;
+  padding: 0px 20px;
+  font-family: 'Nunito Sans', sans-serif;
+  border-radius: 21.5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: rgb(195, 195, 195);
+}
+
+.nav-button:hover {
+  border-color: #fff;
+}
+
+#next-img {
+  padding-left: 8px;
+}
+
+#previous-img {
+  padding-right: 8px;
+}
+
+#play-img {
+  position: relative;
+  left: 2px;
+}
+
+.nav-button.inactive {
+  color: #757F97;
+  border-color: #757F97;
+}
+
+#toggle {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.ordinality {
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  bottom: 25px;
+  font-variant-numeric: tabular-nums;
+}

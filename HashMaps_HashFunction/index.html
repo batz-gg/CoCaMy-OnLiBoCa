@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head>
+    <title>Hashing</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <script type="text/javascript" src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"/> 
+  </head>
+  <body>
+    <section id="content">
+      <label for="string">Key</label>
+      <input id="string" type="text" maxlength="8" value="garnet" required="" onchange="updateDetails()" oninput="updateDetails()" onkeyup="updateDetails()" onpaste="updateDetails()" onkeydown="updateDetails()" oncut="updateDetails()" onkeypress="updateDetails()"/>
+      <br/>
+      <label for="hashed-into">Hashed Into</label>
+      <input type="text" disabled="disabled" id="hashed-into"/>
+      <br/>
+      <label for="code-points">Code Point</label>
+      <textarea disabled="disabled" id="code-points"></textarea>
+      <br/>
+      <small>(possibly different for different languages or computers)</small>
+      <br/>
+      <label for="add-them-up">Add Them Up</label>
+      <textarea type="text" disabled="disabled" id="add-them-up"></textarea>
+      <br/>
+      <label for="hashed-into">Hash Value</label>
+      <input type="text" disabled="disabled" id="hash-value"/>
+    </section>
+    <script type="text/javascript">updateDetails()</script>
+  
+
+<script type="text/javascript" src="https://external-production.codecademy.com/assets/relay.js"></script></body></html>

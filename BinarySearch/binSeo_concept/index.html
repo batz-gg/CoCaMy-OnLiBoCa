@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Interactive Image</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="images">
+      <img class="interactive-img" src="assets/frame_00_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_02_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_03_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_01_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_04_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_05_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_06_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_07_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_08_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_09_delay-2s.gif">
+      <img class="interactive-img" src="assets/frame_10_delay-2s.gif">
+    </div>
+    <div id="navigation">
+      <button id="previous" class="nav-button">
+        <span id="previous-img"><<</span>
+      </button>
+      <button id="toggle" class="nav-button">
+        <span id="play-img" style="display:hidden">|></span>
+        <span id="pause-img">||</span>
+      </button>
+      <button id="next" class="nav-button">
+        <span id="next-img">>></span>
+      </button>
+    </div>
+    <div>
+    </div>
+  </div>
+  <div class="progress-container">
+    <div class="ordinality">
+      <span id="current-frame">1</span>/<span id="total-frames">X</span>
+    </div>
+    <div class="progress">
+      <div id="bar"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<!--  -->

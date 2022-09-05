@@ -1,0 +1,210 @@
+
+body {
+  background-repeat: no-repeat;
+  width: 80%;
+  background-size: 100% 240%;
+  display: inline;
+  overflow: hidden;
+  /* background-color: #e85b49; */
+  /* display: block;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: lighten(desaturate(blue, 30%), 40%);
+  animation:
+    sunset 4s ease-in-out 1.5s forwards 1,
+    sunrise 4s ease-in-out 10s forwards 1; */
+}
+
+p {
+  font-family: 'Oxygen';
+}
+
+/* eventually, this will be the background */
+.sky {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: lighten(desaturate(blue, 30%), 40%);
+  animation:
+    sunset 4s ease-in-out 1.5s forwards 1,
+    sunrise 4s ease-in-out 10s forwards 1;
+}
+
+.heading {
+  padding-top: 3%;
+}
+
+#words {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.toggle-box {
+  width: 10%;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  margin-left: 75%;
+  padding: 1rem 2rem 1rem 2rem;
+  text-align: center;
+}
+
+#words2 {
+  /* width: 92px;
+  height: 26px; */
+  font-family: Oxygen;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #000000;
+  /* margin-left: 2.25rem; */
+  margin-top: 0rem;
+  /* padding-top: 1rem; */
+}
+
+/* The switch - the box around the slider */
+/* Width = 2*(width of .slider:before) + 2*(left of .slider:before) */
+/* Height = (height of .slider:before) + 2*(bottom of .slider:before) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 78px;
+  height: 46px;
+  /* margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem; */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  left: 7px;
+  bottom: 7px;
+  background-color: white;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ffd976;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #ffd976;
+  box-shadow: 0 0 1px #ffd976;
+}
+
+/* Translation equal to diameter of .slider:before */
+input:checked + .slider:before {
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 23px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* sun transition */
+
+img.up{
+    content: "";
+    display: block;
+    border-radius: 50%;
+    /* background: yellow; */
+    height: 100px;
+    width: 100px;
+    position: absolute;
+
+    /* need to add with javascripts - maybe with off class? */
+    -webkit-animation:
+      am 2s ease-in-out forwards 1;
+    animation:
+      am 2s ease-in-out forwards 1;
+  }
+
+  img.down{
+      content: "";
+      display: block;
+      border-radius: 50%;
+      /* background: yellow; */
+      height: 100px;
+      width: 100px;
+      position: absolute;
+
+      /* need to add with javascripts - maybe with off class? */
+      -webkit-animation:
+        pm 2s ease-in-out forwards 1;
+      animation:
+        pm 2s ease-in-out forwards 1;
+    }
+
+@keyframes am {
+  0% { top: 110%; left: -10rem; opacity: 0.3}
+  100% { top: 10%; left: 10%; opacity: 1}
+
+}
+
+@keyframes pm {
+  0% { top: 10%; left: 10%; opacity: 1}
+  100% { top: 110%; left: -10rem; opacity: 0.3}
+}
+
+@keyframes sunset {
+  75% {background: gold;}
+  80% { background: DarkGoldenrod1;}
+  90% { background: orchid4;}
+  100% { background: darken(desaturate(blue, 30%), 40%);}
+}
+
+@keyframes sunrise {
+  0% { background: darken(desaturate(blue, 30%), 40%);}
+  20% { background: orchid4;}
+  60% { background: DarkGoldenrod1;}
+  70% {background: gold;}
+  100% {background:lighten(desaturate(blue, 30%), 40%)}
+}
