@@ -1,0 +1,216 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+    background-color: #FFFFFF;
+    margin: 0px;
+    padding:40px 0px;
+}
+/** header styles **/
+.header{
+    background-image: url(https://images.unsplash.com/photo-1426869884541-df7117556757?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb);
+    background-position: center bottom;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 90%;
+}
+.overlay:before {
+    content: " ";
+    z-index: 1;
+    display: block;
+    position: absolute;   
+    height: 450px;
+    top: 40;
+    left: 5%;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.overlay * {
+    position: relative; /* Makes elements display above overlay. */
+}
+h1{
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    font-size: 80px;
+    margin: 0px;
+    padding-top: 12%;
+    text-align: center;
+    z-index: 2;
+}
+h2{
+    font-family: 'Alice' , sans-serif;
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+}
+h3{
+    font-family: 'Alice' , sans-serif;
+    font-size: 22px;
+    color: white;
+}
+h4{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0px;
+    text-transform: uppercase;
+
+}
+h5{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0px;
+    text-transform: uppercase;
+
+}
+h6{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    margin: 0px;
+    text-transform: uppercase;
+
+}
+p{
+    color: #011C27;
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+}
+.tips p {
+    color: midnightblue;
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500; 
+}
+.tips h3 {
+    font-family: 'Alice' , sans-serif;
+    font-size: 22px;
+    color: midnightblue;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+}
+li{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+.info{
+    display: flex;
+    width: 100%;
+}
+.info ul{
+    display: table-cell;
+    width: 50%;
+}
+.steps{
+    border: 1px solid #dddddd;
+    padding: 40px;
+}
+#recipe{
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 27px;
+}
+.ingredients{
+    background-color: midnightblue;
+    padding: 30px;
+    width: 50%;
+}
+.steps li{
+    list-style-type: circle;
+    color: #011C27;
+    font-size: 18px !important;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.ingredients li{
+    color: #ffffff;
+    line-height: 18px;
+    margin-top: 30px;
+    text-align: left;
+}
+.nutrition{
+    background-color: lightgray;
+    padding: 30px;
+    width: 50%;
+}
+.nutrition li{
+    margin-top: 20px;
+    color: midnightblue;
+}
+.nutrition h2{
+    color:midnightblue;
+}
+.nutrition h3{
+    color:midnightblue;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0px;
+    text-transform: uppercase;
+
+}
+.nutrition p{
+    font-size: 24px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    margin: 0px;
+    color: midnightblue;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.searchTerm {
+    float: left;
+    width: 100%;
+    border: 3px solid midnightblue;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px;
+    outline: none;
+    color: lightskyblue;
+}
+
+.searchTerm:focus{
+    color: midnightblue;
+}
+
+.searchButton {
+    position: absolute;  
+    right: -10px;
+    top: 8px;
+    width: auto;
+    height: 36px;
+    border: 1px solid midnightblue;
+    background: midnightblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wrap{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+    top: 10;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,393 @@
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Module Styles
+  5. Component Styles
+======================================== */
+
+/* 1. Global Styles
+======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+.float-right {
+  float: right;
+}
+
+/* 2. Typography Styles
+======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2a2a2a;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 700;
+  transition: font-size 0.25s ease;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: calc(64px / 1.5);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: calc(40px / 1.5);
+}
+
+h3 {
+  font-size: calc(32px / 1.5);
+}
+
+h4 {
+  font-size: calc(23px / 1.5);
+}
+
+p {
+  color: #414546;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0 0 15px;
+}
+
+a {
+  color: #A01C36;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+li {
+  color: #2a2a2a;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 16px;
+  list-style: none;
+}
+
+label {
+  color: #A01C36;
+  display: block;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+small {
+  color: #A01C36;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+/* 3. Structure Styles
+======================================== */
+.container {
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0 15px;
+}
+
+.divider {
+  border: none;
+  border-bottom: 1px solid #F2F3F5;
+  clear: both;
+  width: 100%;
+  margin: 30px 0px;
+}
+
+/* 4. Modules Styles
+======================================== */
+
+/* Site Navigation */
+.site-header {
+  background-color: #A01C36;
+  padding: 20px 15px;
+}
+
+.site-header-nav {
+  align-items: center;
+  display: flex;
+}
+
+.site-nav-left,
+.site-nav-right {
+  align-items: center;
+  display: flex;
+}
+
+.site-nav-right {
+  float: right;
+  margin-left: auto;
+}
+
+.site-nav-left li:not(:first-child),
+.site-nav-right li {
+  display: none;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.site-nav-mobile li {
+  display: inline-block;
+}
+
+.site-nav-left li:not(:last-child),
+.site-nav-right li:not(:last-child),
+.site-nav-mobile li:not(:last-child) {
+  margin-right: 25px;
+}
+
+.site-nav-left .logo {
+  width: 180px;
+}
+
+.site-nav-link {
+  border-bottom: 2px solid transparent;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav-link-bold {
+  border-bottom: 2px solid transparent;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Site Footer */
+.footer {
+  background-color: #F2F2F2;
+  padding: 30px 30px 60px;
+}
+
+.footer-section {
+  margin-bottom: 25px;
+  text-align: center;
+  display: block;
+}
+
+.footer .logo {
+  margin-bottom: 5px;
+  width: 110px;
+}
+
+.footer p  {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer-email-input {
+  margin-right: 2.5%;
+  width: 68% !important;
+}
+
+.footer-email-button {
+  font-size: 12px !important;
+  padding: 10px !important;
+  width: 27.5% !important;
+}
+
+/* 5. Component Styles
+======================================== */
+.button {
+  border-radius: 3px;
+  color: #2a2a2a;
+  display: inline-block;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease;
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+.button-primary {
+  background-color: #E9BE53;
+}
+
+.button-secondary {
+  background-color: #FFFFFF;
+}
+
+.button-full {
+  width: 100%;
+}
+
+.button-small {
+  font-size: 13px;
+  padding: 10px 30px;
+}
+
+.form {
+  display: block;
+  margin-bottom: 60px;
+}
+
+input,
+select,
+textarea {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  border: 1px solid #F2F3F5;
+  box-shadow: inset 1px 1px 3px 0 rgba(189,191,192,0.10);
+  height: 35px;
+  margin-bottom: 15px;
+  padding: 10px;
+  transition: border-color 0.5s ease;
+  width: 100%;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  height: auto;
+  width: auto;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  border: 1px solid #54094B;
+  outline: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* 6. Page Styles
+======================================== */
+
+.site-main {
+  padding: 30px 15px;
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.site-main-background {
+  background-color: #290424;
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  height: 400px;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.site-main-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.site-main-section-header {
+  margin-bottom: 60px;
+}
+
+.site-main-section {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.featured-image,
+.featured-content {
+    display: block;
+  }
+
+.featured-image {
+  margin-bottom: 20px;
+}
+
+.recipe-info {
+  margin-bottom: 20px;
+}
+
+.recipe-info-item {
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.recipe-preview {
+  margin-bottom: 60px;
+}
+
+.recipe-preview:first-child {
+  margin-top: 30px;
+}
+
+.recipe-preview-img {
+  display: inline;
+  margin-bottom: 20px;
+}
+
+.recipe-preview-content {
+  display: block;
+}
+
+.recipe-more {
+  text-align: center;
+}
+
+.recipe-more a {
+  font-weight: 700;
+}
