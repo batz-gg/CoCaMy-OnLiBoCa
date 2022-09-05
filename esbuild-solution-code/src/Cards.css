@@ -1,0 +1,25 @@
+.cards {
+  width: 80%;
+  margin: 36px auto;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+
+.card-item {
+  display: inline-block;
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-location {
+  margin-top: 12px;
+}
+
+.location-icon {
+  width: 1.25em;
+  margin-right: 6px;
+}

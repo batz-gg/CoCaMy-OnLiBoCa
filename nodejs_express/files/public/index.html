@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Express Yourself</title>
+  <link href=".\public\css\font.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <img src=".\logo.svg">
+  </header>
+  <div class="canvas">
+    <div id="expression-information" class="inactive panel">
+      <ul class="tabs">
+        <li id="get-expression">GET</li>
+        <li id="create-expression">CREATE</li>
+        <li id="update-expression">UPDATE</li>
+        <li id="delete-expression">DELETE</li>
+      </ul>
+      <form autocomplete="off">
+        <div class="expression-form">
+          <label for="id">id: </label>
+          <input id="id-field" type="text" name="id" maxlength="3">
+          <br />
+          <label for="name">name: </label>
+          <input id="name-field" type="text" name="name" maxlength="6">
+          <br />
+          <label for="emoji">emoji: </label>
+          <select id="emoji-field" >
+            <option value="😀">😀</option>
+            <option value="😁">😁</option>
+            <option value="😂">😂</option>
+            <option value="😅">😅</option>
+            <option value="😆">😆</option>
+            <option value="😉">😉</option>
+            <option value="😋">😋</option>
+            <option value="😎">😎</option>
+            <option value="😍">😍</option>
+            <option value="😥">😥</option>
+            <option value="😭">😭</option>
+            <option value="😱">😱</option>
+            <option value="🤓">🤓</option>
+            <option value="😴">😴</option>
+            <option value="🤐">🤐</option>
+            <option value="💩">💩</option>
+          </select>
+          <div class="button">
+            <a>SEND REQUEST</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="expressions-information" class="inactive panel">
+      <ul class="tabs">
+      </ul>
+      <div class="button">
+        <a>REFRESH DATABASE</a>
+      </div>
+    </div>
+    <img id="expression-route" src=".\expression-route-inactive.svg">
+    <div id="expression-text" class="tech">
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+    </div>
+    <img id="expressions-route" src=".\expressions-route-inactive.svg">
+    <img id="server-machine" src=".\server-machine-inactive.svg">
+    <div id="status-code" class="tech">
+      <p id="code-number"></p>
+      <p id="code-description"></p>
+    </div>
+    <img id="lightbulb" src=".\lightbulb-inactive.svg">
+    <img id="beaker" src=".\beaker-inactive.svg">
+    <img id="buttons" src=".\buttons-inactive.svg">
+    <img id="sliders" src=".\sliders-inactive.svg">
+    <div id="expressions-text" class="tech">
+      <pre></pre>
+      <pre></pre>
+    </div>
+    <div id="machine-type-buttons">
+      <div id="expression-machine-type">Expressions</div>
+      <div id="animals-machine-type">Animals</div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./machines.js"></script>
+</body>
+</html>

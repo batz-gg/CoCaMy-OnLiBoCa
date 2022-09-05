@@ -1,0 +1,72 @@
+@import "https://fonts.googleapis.com/css2?family=Quicksand";
+
+/* src/filters.css */
+.filters {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.filter-item {
+  padding: 10px;
+}
+input[type=checkbox] {
+  display: none;
+}
+label {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+label:hover {
+  cursor: pointer;
+}
+#woods {
+  background-color: #096148;
+}
+#water {
+  background-color: #0089a7;
+}
+#city {
+  background-color: #b4a582;
+}
+input[type=checkbox]:checked ~ label {
+  border: solid 4px white;
+}
+
+/* src/Cards.css */
+.cards {
+  width: 80%;
+  margin: 36px auto;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+.card-item {
+  display: inline-block;
+  width: 100%;
+}
+.card-img {
+  width: 100%;
+}
+.card-location {
+  margin-top: 12px;
+}
+.location-icon {
+  width: 1.25em;
+  margin-right: 6px;
+}
+
+/* src/app.css */
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 36px 0px;
+  background-color: #fad689;
+}
+.header {
+  text-align: center;
+}
+.summer {
+  width: 3em;
+}

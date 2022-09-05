@@ -1,0 +1,17 @@
+{
+  "name": "vacation-destinations",
+  "version": "1.0.0",
+  "description": "esbuild project code for Learn Build Tools course on Codecademy",
+  "main": "./src/app.js",
+  "scripts": {
+    "build": "esbuild ./src/app.js --bundle --loader:.js=jsx --loader:.jpg=file --loader:.svg=dataurl --outdir=./dist"
+  },
+  "keywords": [],
+  "author": "Jiwon Shin",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.12.20",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

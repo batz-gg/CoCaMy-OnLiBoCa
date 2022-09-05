@@ -1,0 +1,35 @@
+
+<svg width="176px" height="278px" viewBox="0 0 176 278" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="40" y="0" width="136" height="99" rx="4.94802"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy" transform="translate(-209.000000, -127.000000)">
+            <g id="Main-Machine-Part-3" transform="translate(209.000000, 127.000000)">
+                <rect id="Rectangle-10-Copy-42" fill="#8B96B8" transform="translate(30.000000, 59.000000) rotate(90.000000) translate(-30.000000, -59.000000) " x="25" y="29" width="10" height="60" rx="3.9984"></rect>
+                <rect id="Rectangle-10-Copy-44" fill="#8B96B8" transform="translate(148.000000, 270.500000) rotate(90.000000) translate(-148.000000, -270.500000) " x="143" y="254" width="10" height="33" rx="3.9984"></rect>
+                <rect id="Rectangle-10-Copy-45" fill="#8B96B8" transform="translate(160.000000, 184.500000) scale(1, -1) translate(-160.000000, -184.500000) " x="155" y="95" width="10" height="179" rx="3.9984"></rect>
+                <g id="Rectangle-5-Copy-5">
+                    <use fill="#040404" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#A8B4D8" stroke-width="1.41372" x="40.70686" y="0.70686" width="134.58628" height="97.58628" rx="4.94802"></rect>
+                </g>
+                <rect id="Rectangle-10-Copy-40" fill="#A8B4D8" transform="translate(4.000000, 58.000000) scale(-1, -1) rotate(90.000000) translate(-4.000000, -58.000000) " x="-5" y="54" width="18" height="8"></rect>
+                <rect id="Rectangle-10-Copy-41" fill="#A8B4D8" transform="translate(37.000000, 58.000000) scale(-1, -1) rotate(90.000000) translate(-37.000000, -58.000000) " x="28" y="54" width="18" height="8"></rect>
+                <rect id="Rectangle-10-Copy-43" fill="#A8B4D8" transform="translate(160.000000, 103.000000) scale(-1, -1) rotate(180.000000) translate(-160.000000, -103.000000) " x="151" y="99" width="18" height="8"></rect>
+                <path d="M8,54 L8,64" id="Line-5-Copy-20" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(8.000000, 59.000000) scale(-1, 1) translate(-8.000000, -59.000000) "></path>
+                <path d="M32,54 L32,64" id="Line-5-Copy-29" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(32.000000, 59.000000) scale(-1, 1) translate(-32.000000, -59.000000) "></path>
+                <path d="M139,266 L139,276" id="Line-5-Copy-36" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(139.000000, 271.000000) scale(-1, 1) translate(-139.000000, -271.000000) "></path>
+                <path d="M154,265 L154,275" id="Line-5-Copy-37" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(154.000000, 270.000000) scale(-1, 1) translate(-154.000000, -270.000000) "></path>
+                <path d="M160,103 L160,113" id="Line-5-Copy-29" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(160.000000, 108.000000) scale(-1, -1) rotate(-270.000000) translate(-160.000000, -108.000000) "></path>
+                <path d="M160,130 L160,140" id="Line-5-Copy-31" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(160.000000, 135.000000) scale(-1, -1) rotate(-270.000000) translate(-160.000000, -135.000000) "></path>
+                <path d="M160,154 L160,164" id="Line-5-Copy-32" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(160.000000, 159.000000) scale(-1, -1) rotate(-270.000000) translate(-160.000000, -159.000000) "></path>
+                <path d="M160,178 L160,188" id="Line-5-Copy-34" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(160.000000, 183.000000) scale(-1, -1) rotate(-270.000000) translate(-160.000000, -183.000000) "></path>
+                <path d="M160,207 L160,217" id="Line-5-Copy-33" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(160.000000, 212.000000) scale(-1, -1) rotate(-270.000000) translate(-160.000000, -212.000000) "></path>
+                <path d="M161,241 L161,251" id="Line-5-Copy-38" stroke="#2B2037" stroke-width="1.1424" stroke-linecap="square" transform="translate(161.000000, 246.000000) scale(-1, -1) rotate(-270.000000) translate(-161.000000, -246.000000) "></path>
+                <rect id="Rectangle-10-Copy-46" fill="#A8B4D8" transform="translate(135.000000, 269.000000) scale(-1, -1) rotate(90.000000) translate(-135.000000, -269.000000) " x="126" y="265" width="18" height="8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

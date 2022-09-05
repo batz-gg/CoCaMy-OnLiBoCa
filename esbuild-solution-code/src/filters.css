@@ -1,0 +1,40 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.filter-item {
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+#woods {
+  background-color: #096148;
+}
+
+#water {
+  background-color: #0089a7;
+}
+
+#city {
+  background-color: #b4a582;
+}
+
+input[type="checkbox"]:checked ~ label {
+  border: solid 4px white;
+}
