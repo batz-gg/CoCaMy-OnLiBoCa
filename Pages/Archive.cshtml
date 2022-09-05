@@ -1,0 +1,35 @@
+﻿@page
+@model ArchiveModel
+@{
+}
+
+<div class="jumbotron jumbotron-fluid" id="archive-jumbotron">
+  <div id="jumbotron-main-text">
+    <h1>Archive</h1>
+    <p>The best past recipes!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <!-- Page model properties displayed here -->
+    <div class="blog-post">
+      <h3 class="blog-post-title">@Model.Displayed.Title</h3>
+      <p class="blog-post-meta">Posted on @Model.Displayed.Date.ToShortDateString()</p>
+      <p>@Model.Displayed.Body</p>
+    </div>
+  </div>
+  <div class="col">
+    <h1>Older posts</h1>
+    <hr>
+    @for (int i = 0; i < Model.Archive.Count; i++)
+    {
+      <div>
+        <h3>
+          <a asp-page="/Archive" asp-route-index="@i">@Model.Archive[i].Title</a>
+        </h3>
+        <p>Posted on @Model.Archive[i].Date.ToShortDateString()</p>
+      </div>
+    }
+  </div>
+</div>

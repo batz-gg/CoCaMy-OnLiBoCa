@@ -1,0 +1,67 @@
+﻿@*@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">HI ALL МАНАЙХААН!</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+@page
+@model IndexModel
+@{
+  ViewData["Title"] = "Home page";
+}
+
+<div class="jumbotron jumbotron-fluid" id="chef-jumbotron">
+  <div id="request-info">
+    <em>RequestMethod</em>: @Model.RequestMethod  <em>RequestInfo</em>: @Model.RequestValues
+  </div>
+  <div id="jumbotron-main-text">
+    <h1>Chef's Blog</h1>
+    <p>A place for the best recipes!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h1>Write a new post</h1>
+    <hr>
+    <!-- Form start -->
+    <form method="post">
+      <div class="form-group">
+        <label for="Title">Title</label>
+        <!-- Use asp-for here -->
+        <input type="text" class="form-control" id="Title" name="Title" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label for="Date">Date</label>
+        <!-- Use asp-for here -->
+        <input type="date" class="form-control" id="Date" name="Date">
+      </div>
+      <div class="form-group">
+        <label for="Body">Your post</label>
+        <!-- Use asp-for here -->
+        <textarea class="form-control" id="Body" name="Body" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn" id="submit">Submit</button>
+    </form>
+    <!-- Form end -->
+  </div>
+
+  <div class="col">
+    <h1>Recent posts</h1>
+    <hr>
+    <!-- Page model properties displayed here -->
+    <div class="blog-post">
+      <h2 class="blog-post-title">@Model.Title</h2>
+      <p class="blog-post-meta">Posted on @Model.Date.ToShortDateString()</p>
+      <p>@Model.Body</p>
+    </div>
+  </div>
+</div>
+
+
+

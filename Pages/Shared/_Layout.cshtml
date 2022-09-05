@@ -1,0 +1,140 @@
+﻿@*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Blog</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Blog - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Blog</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-toggleable-sm border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="30" height="30" aria-hidden="true"
+                         viewBox="0 0 463.001 463.001" style="enable-background:new 0 0 463.001 463.001;" xml:space="preserve">
+                        <g>
+                        <path d="M383.501,112h-304c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h0.5v8.5c0,7.039,3.115,13.36,8.033,17.67
+		c0.697,23.496,16.075,45.232,43.497,61.363c5.827,3.428,12.086,6.499,18.666,9.241l-22.039,110.193
+		c-0.003,0.016-0.006,0.031-0.009,0.047l-24.003,120.015c-0.812,4.062,1.822,8.013,5.884,8.825c0.497,0.099,0.991,0.147,1.479,0.147
+		c3.502,0,6.633-2.465,7.347-6.031L141.649,343h179.703l8.674,43.369c-15.165,5.521-26.025,20.081-26.025,37.131
+		c0,21.78,17.72,39.5,39.5,39.5s39.5-17.72,39.5-39.5c0-21.326-16.99-38.747-38.144-39.466l-32.052-160.26
+		c6.58-2.742,12.838-5.814,18.666-9.241c27.422-16.131,42.8-37.867,43.497-61.363c4.919-4.311,8.033-10.632,8.033-17.67V127h0.5
+		c4.142,0,7.5-3.358,7.5-7.5S387.643,112,383.501,112z M368.001,423.5c0,13.509-10.991,24.5-24.5,24.5s-24.5-10.991-24.5-24.5
+		s10.991-24.5,24.5-24.5S368.001,409.991,368.001,423.5z M318.352,328H144.649l19.797-98.985
+		c20.406,6.518,43.301,9.985,67.054,9.985s46.649-3.468,67.054-9.985L318.352,328z M323.865,201.604
+		C299.313,216.046,266.51,224,231.501,224s-67.812-7.954-92.364-22.396c-20.149-11.852-32.462-26.76-35.429-42.604h255.585
+		C356.327,174.844,344.013,189.752,323.865,201.604z M368.001,135.5c0,4.687-3.813,8.5-8.5,8.5h-256c-4.687,0-8.5-3.813-8.5-8.5V127
+		h273V135.5z" />
+
+                        <path d="M338.2,418.2c-1.4,1.39-2.2,3.33-2.2,5.3c0,1.97,0.8,3.9,2.2,5.3c1.39,1.4,3.33,2.2,5.3,2.2c1.97,0,3.91-0.8,5.3-2.2
+		c1.4-1.39,2.2-3.33,2.2-5.3c0-1.97-0.8-3.91-2.2-5.3c-1.39-1.4-3.33-2.2-5.3-2.2C341.521,416,339.591,416.8,338.2,418.2z" />
+
+                        <path d="M216.001,87.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5c0-7.369,2.667-10.702,6.356-15.315
+		c4.296-5.371,9.644-12.054,9.644-24.685s-5.347-19.314-9.644-24.685c-3.69-4.613-6.356-7.946-6.356-15.315
+		c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5c0,12.631,5.347,19.314,9.644,24.685c3.69,4.613,6.356,7.946,6.356,15.315
+		s-2.667,10.702-6.356,15.315C221.348,68.186,216.001,74.869,216.001,87.5z" />
+
+                        <path d="M255.501,95c4.142,0,7.5-3.358,7.5-7.5c0-7.369,2.667-10.702,6.356-15.315c4.296-5.371,9.644-12.054,9.644-24.685
+		c0-10.006-3.37-16.111-6.306-20.313c-2.372-3.395-7.048-4.223-10.444-1.851c-3.395,2.373-4.224,7.048-1.851,10.444
+		c2.161,3.092,3.601,6.269,3.601,11.72c0,7.369-2.667,10.702-6.356,15.315c-4.296,5.371-9.644,12.054-9.644,24.685
+		C248.001,91.642,251.359,95,255.501,95z" />
+
+                        <path d="M191.501,95c4.142,0,7.5-3.358,7.5-7.5c0-7.369,2.667-10.702,6.356-15.315c4.296-5.371,9.644-12.054,9.644-24.685
+		c0-10.006-3.37-16.111-6.306-20.313c-2.373-3.395-7.049-4.223-10.444-1.851c-3.395,2.373-4.224,7.048-1.851,10.444
+		c2.161,3.092,3.601,6.269,3.601,11.72c0,7.369-2.667,10.702-6.356,15.315c-4.296,5.371-9.644,12.054-9.644,24.685
+		C184.001,91.642,187.359,95,191.501,95z" />
+
+                        </g>
+                    </svg>
+
+                    Chef's Blog
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Archive">Archive</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Blog - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

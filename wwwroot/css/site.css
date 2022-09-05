@@ -1,0 +1,181 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+/*
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+*/
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/* Non-bootstrap, custom CSS */
+
+div.jumbotron {
+    position: relative;
+    display: flex;
+    height: 12rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div#chef-jumbotron {
+    background-image: url("https://content.codecademy.com/courses/asp-dot-net/vegetables-fruit.jpg");
+}
+
+div#archive-jumbotron {
+    background-image: url("https://content.codecademy.com/courses/asp-dot-net/sliced-carrot-fruits.jpg");
+}
+
+    div#archive-jumbotron h1,
+    div#archive-jumbotron p {
+        color: white;
+    }
+
+div#jumbotron-main-text {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+div#request-info {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 10px;
+}
+
+body,
+nav,
+div.container,
+div.row {
+    background-color: #FFFBE7;
+}
+
+hr {
+    background-color: #2F5E4D;
+}
+
+html {
+    font-size: 12px;
+    background-color: #FFFBE7;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a.navbar-brand {
+    font-weight: bold;
+}
+
+.container,
+.container * {
+    color: #346B5D;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+input, textarea {
+    border: 1px solid #C3DDCD !important;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #C3DDCD;
+}
+
+.form-control::-moz-placeholder {
+    color: #C3DDCD;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #C3DDCD;
+}
+
+.form-control:focus {
+    color: #346B5D !important;
+}
+
+button#submit {
+    width: 100%;
+    color: white;
+    background-color: #ff5432;
+}
