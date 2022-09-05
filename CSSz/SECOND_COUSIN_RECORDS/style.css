@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+    
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+    
+  img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+  }
+    
+  h1, 
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+    
+  h4 {
+    color: #0B0014;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    text-decoration-line: overline;
+    text-decoration-style: wavy;
+  }
+  
+  .container {  
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+    
+  .split {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .split > * {
+    flex-basis: 30%;
+    min-width: 240px;
+  }
+    
+  .btn {
+    margin: 10px 20px 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 20px; 
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background: #2c365e;
+    border-radius: 7px;
+    transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
+    outline: none;
+    border: 1px solid black;
+  }
+    
+  .btn:hover,
+  .btn:focus {
+    transform: scale(1.03);
+    opacity: 0.9;
+  }
+  
+  .record-label-title {
+    line-height: 1;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+  }
+    
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #17353d;
+  }
+    
+  .hero {
+    text-align: center;
+    padding: 180px 0;
+    background: #753f83;
+    color: #eef1ea;
+    opacity: .8;
+    background-image: url('https://static-assets.codecademy.com/Courses/Learn-CSS/Variables/Lesson/record.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    
+  .spacing > * + * {
+    margin-top:  2rem;
+  }
+    
+  .featured {
+    background: #add2eb;
+    padding-top: 60px;
+  }
+    
+  img.artist-img {
+    border-radius: 50%;
+  }
+    
+  .featured-details {
+    max-width: 100%;
+    padding-top: 2px;
+    opacity: 0;
+    margin-right: 8%;
+    -webkit-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+    z-index: 2;
+    text-align: center;
+  }
+    
+  .featured-img {
+      border: 8px solid black;
+  }
+    
+  .featured-artist {
+    position: relative;
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 2;
+    transition: opacity 250ms ease-in-out;
+    }
+    
+  .featured-artist:hover .featured-details, .featured-artist:focus .featured-artist {
+    opacity: 1;
+    text-shadow: 0 0 2em white;
+    }
+    
+    
+  .featured-artist:hover, .featured-artist:focus {
+    opacity: .8;
+  }
+    
+    
+  .featured-details span {
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+    
+  .grid-lay {
+    max-width: 100%;
+    display: grid;
+    column-gap: 22px;
+    grid-template-columns: minmax(10%, 1fr) minmax(10%, 1fr);
+  }
+    
+  .artists {
+    background: #eee;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+    
+    
+  .artist {
+    background: #a01c32;
+    padding: 48px;
+    border-radius: 40px;
+    margin-bottom: 80px;
+    text-align: center;
+    box-shadow: 10px 10px 3em grey;
+  }
+    
+  .artist:nth-child(even) {
+    /*For exercise 4*/
+  }
+    
+    
+  .artist-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 2rem black;  
+  }
+      
+  .artist-img {
+    display: inline-block;
+    justify-content: center;
+  }
+    
+  .date {
+    font-weight: 200;
+    color: #0B0014;
+  }
+    
+  .artist-description {
+    font-size: 18px;
+    color: black;
+    font-weight: 200;
+  }
+     
+  .footer-container {
+    background: #333;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+      
+  .footer-section-left {
+    display: flex;
+    flex-direction: row;
+  }
+      
+  .footer-section {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+      
+  .footer-section p {
+    margin-top: 0;
+    padding: 0 10px 0 10px;
+  }
+      
+  .footer-section.name {
+    border-right: 1px solid ;
+    padding-right: 10px;
+    font-weight: 100;  
+  }
+    
+    
+  @media (max-width: 700px) {
+    .grid-lay {
+      display: block;
+    }
+      
+    .hero {
+      padding-bottom: 40px;
+    }
+      
+    img.header-img {
+      top: -10px;
+      opacity: 1;
+    }
+  }
+    

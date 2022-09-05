@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(239, 217, 202);
+}
+
+.container, .container-fluid {
+  background-color: rgb(109, 240, 194);
+  border: black solid 15px;
+  color: rgb(0, 0, 0);
+}
+
+.row {
+  background-color: rgb(236, 93, 23);
+  border: rgb(255, 199, 64) solid 10px;
+}
+
+[class*="col"]{
+  border: black solid 5px;
+  background-color: rgb(100, 0, 228);
+  color: rgb(255, 255, 255);   
+}

@@ -1,0 +1,113 @@
+*  {
+  margin: 0px;
+  border: 0;
+  font-family: 'Space Mono';
+  color: white;
+  background-color: #0e0e0e;
+  margin: auto;
+}
+
+h1 {
+  border-bottom: 1px solid white;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+img {
+  margin: 0px 40px 40px 40px;
+  width: 30%;
+  height: auto;
+}
+
+p {
+  margin: 0 6%;
+}
+
+nav ul li,
+#nav ul li {
+  padding: 0px 25px;
+}
+
+footer,
+#footer {
+  min-width: 620px;
+  max-width: 980px;
+}
+
+footer li,
+#footer li {
+  padding: 0px 5px;
+}
+
+.container {
+  max-width: 980px;
+  min-width: 625px;
+}
+
+.p-container {
+  margin: 0px 6%;
+}
+
+.timeline {
+  height: 10px;
+  width: 100%;
+  z-index: 1;
+}
+
+.date-square {
+  margin: 0px 16%;
+}
+
+#early .timeline {
+  background-image: linear-gradient(to right, #ff3f3f, #ffcc3f);
+}
+
+#middle .timeline {
+  background-image: linear-gradient(to right, #f2ff3f, #3fe9ff);
+}
+
+#late .timeline {
+  background-image: linear-gradient(to right, #3fa9ff, #b03fff);
+}
+
+#current .timeline {
+  background-image: linear-gradient(to right, #e03fff, #ff3f3f);
+  z-index: 10;
+}
+
+#early h2 {
+  border-top: 4px solid #ff5e40;
+  width: 200px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+#middle h2 {
+ border-top: 4px solid #f1ff40;
+ width: 200px;
+ padding-top: 10px;
+}
+
+#late h2 {
+  border-top: 4px solid #40a9ff;
+  width: 200px;
+  padding-top: 10px;
+}
+
+#current h2 {
+  border-top: 4px solid #df3fff;
+  width: 200px;
+  padding-top: 10px;
+}
