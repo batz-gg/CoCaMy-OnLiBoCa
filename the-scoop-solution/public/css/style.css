@@ -1,0 +1,360 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.none {
+  display: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  border-bottom: solid 5px #2f2f2f;
+  text-align: center;
+  font-family: 'Alfa Slab One', cursive;
+  color: #333333;
+}
+
+header .small {
+  font-size: 1.1875rem;
+  letter-spacing: 1.3px;
+}
+
+header .large {
+  padding-left: 1.2rem;
+  font-size: 2.5rem;
+  letter-spacing: 2.8px;
+}
+
+.button {
+  width: fit-content;
+  font-family: 'Roboto', sans-serif;
+}
+
+.edit.button,
+.delete.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 6px;
+  margin-right: .5rem;
+  background-color: #2f2f2f;
+  font-size: .675rem;
+  letter-spacing: 0.9px;
+  color: #d8d8d8;
+  transition: .3s;
+}
+
+.edit.button:hover {
+  background-color: #afb5ac;
+  color: #2f2f2f;
+}
+
+.delete.button:hover {
+  background-color: #bd1010;
+  color: #2f2f2f;
+}
+
+.App .login input,
+.App .username {
+  margin-right: 1rem;
+}
+
+.App .login .button {
+  padding: .375rem .5rem;
+  background-color: #2f2f2f;
+  font-size: .75rem;
+  letter-spacing: 1.8px;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 530px) {
+  header {
+    flex-direction: column;
+  }
+
+  .App .login {
+    margin-top: 1rem;
+  }
+}
+
+.ArticleList {
+  min-height: 100vh;
+  padding: 0 2rem;
+  background-color: #efefef;
+}
+
+.ArticleList .header {
+  display: flex;
+  align-items: center;
+  padding-top: 2.25rem;
+}
+
+.ArticleList h2 {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #2f2f2f;
+  flex-grow: 2;
+}
+
+.ArticleList .button {
+  border: solid 1px #343433;
+  padding: .5rem;
+  transition: .35s;
+}
+
+.ArticleList .button:hover {
+  background-color: #343433;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 440px) {
+  .ArticleList .header {
+    flex-direction: column;
+  }
+
+  .ArticleList h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.ArticleView .article {
+  padding: 3.5rem 0 3rem 7rem;
+  background-color: #f4c455;
+  font-size: 20px;
+}
+
+.ArticleView .article .Score {
+  color: #ffffff;
+}
+
+.ArticleView .article .username {
+  color: #ffffff;
+}
+
+.ArticleView .comment-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem 7rem;
+  background-color: #efefef;
+}
+
+.ArticleView .comment-list textarea {
+  width: 90%;
+  max-width: 425px;
+  min-height: 5rem;
+  padding: 1rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 540px) {
+  .ArticleView .article {
+    padding-left: 3rem;
+  }
+
+  .ArticleView .comment-list {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.User .header {
+  padding-top: 4.6875rem;
+  padding-left: 7rem;
+  background-color: #efd584;
+  color: #2f2f2f;
+}
+
+.User .header h2 {
+  padding-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+.User .tab {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 224px;
+  padding: 1rem;
+  background-color: #ffffff;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: #b1aeb1;
+  transition: .25s;
+}
+
+.User .tab:first-child {
+  margin-right: 1rem;
+}
+
+.User .tab:hover {
+  color: #2f2f2f;
+}
+
+.User .tab.active {
+  background-color: #eceaea;
+  color: #2f2f2f;
+}
+
+.User .content {
+  min-height: 100vh;
+  padding: 0 7rem;
+  background-color: #efefef;
+}
+
+@media only screen and (max-width: 710px) {
+  .User .header {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .User .header,
+  .User .content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+
+.Article {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 0;
+}
+
+.Article .url {
+  display: inline-block;
+  padding-right: 2em;
+  padding-bottom: 3px;
+  border-bottom: solid 1px #343433;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.18;
+  letter-spacing: 0.5px;
+  color: #2f2f2f;
+  transition: .3s;
+}
+
+.Article .url:hover {
+  border-bottom: 1px solid #6b6b6b;
+  color: #6b6b6b;
+}
+
+.Article .information {
+  margin: 4px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: .75em;
+}
+
+.Article .username {
+  padding-right: 1em;
+  border-right: solid 1px #343433;
+  margin-right: 1em;
+  color: #d9ab4a;
+}
+
+.Article .comments {
+  font-weight: bold;
+}
+
+.Article .edit-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.Article .edit-section input {
+  max-width: 32rem;
+  margin-bottom: .5rem;
+}
+
+.Article .edit-section .label {
+  margin-bottom: .35rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+
+.Comment {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 0;
+  border-bottom: solid 1px #2f2f2f;
+}
+
+.Comment .information {
+  font-family: 'Roboto', sans-serif;
+}
+
+.Comment .username {
+  display: block;
+  padding-bottom: 1rem;
+  font-size: .75rem;
+  letter-spacing: 0.4px;
+  color: #d9ab4a;
+}
+
+.Comment .body {
+  padding-bottom: .5rem;
+  font-size: .875rem;
+  line-height: 1.36;
+  letter-spacing: 0.5px;
+  color: #2f2f2f
+}
+
+.Comment input {
+  margin-bottom: 1rem;
+}
+
+.Score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 1.1875rem;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2rem;
+  letter-spacing: 1.7px;
+  color: #f4c455;
+}
+
+.Score .vote:first-child {
+  padding-right: 2.5px;
+}
+
+.Score .vote {
+  opacity: .6;
+  transition: .3s;
+}
+
+.Score .vote:hover {
+  opacity: .8;
+}
+
+.Score .vote:active,
+.Score .vote.active {
+  opacity: 1;
+}
