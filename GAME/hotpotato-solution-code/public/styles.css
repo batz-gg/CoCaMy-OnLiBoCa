@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #10152e;
+  color: white;
+}
+
+#game-text{
+  position: absolute;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  pointer-events: none; 
+}
+
+#display {
+  background: #63fe34a1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#game{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#table { 
+  margin: 0px;
+  display: grid;
+  grid-template-columns: min(43vw, 43vh) min(43vw, 43vh);
+}
+
+.playerAvatar {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.star {
+  width: min(25%);
+  height: min(20%);
+  position: relative;
+  right: 20%;
+  top: 5%;
+}
+
+.player { 
+  padding: 2.5vw;
+  background: #390fe5;
+  max-width: 43vw;
+  max-height: 43vw;
+  display: flex;
+  border: 2px solid #10152e;
+}

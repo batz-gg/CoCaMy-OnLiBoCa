@@ -1,0 +1,72 @@
+body {
+  background-color: #191719;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+}
+
+h1 {
+  padding: 1.5rem 0;
+  font-size: 4rem;
+}
+
+.jumbotron {
+  padding: 7rem 0;
+  background-color: #0D2433;
+  font-family: 'Zilla Slab Highlight', cursive;
+}
+
+.jumbotron .content {
+  display: inline-block;
+  text-align: left;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.jumbotron p {
+  padding-top: .5rem;
+  font-size: 1.25rem;
+}
+
+h3 {
+  padding: 1.5rem 0;
+  font-size: 2.5rem;
+}
+
+.projects {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.projects li {
+  padding: 0 2rem;
+}
+
+.projects img {
+  width: 100%;
+}
+
+h4 {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.contact {
+  padding: 4rem 0;
+  background-color: #0D2433;
+}
+
+a {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-size: 1.75rem;
+  background-color: #2D80D8;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+a:hover {
+  background-color: #63a4e8;
+}

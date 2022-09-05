@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/styles.css">
+  <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
+  <script src="/utils/constants.js"></script>
+  <title>Hot Potato</title>
+</head>
+<body>
+  <div id="game-text">
+      <h1 id="display">Waiting for game to start...</h1>
+  </div>
+  <div id="game">
+    <div id="table">   
+      <div class="player" id="BLUE"><img class="playerAvatar" src="https://static-assets.codecademy.com/Courses/Learn-WebSocket/BLUE_COLD.png"></div>
+      <div class="player" id="GREEN"><img class="playerAvatar" src="https://static-assets.codecademy.com/Courses/Learn-WebSocket/GREEN_COLD.png"></div>
+      <div class="player" id="PINK"><img class="playerAvatar" src="https://static-assets.codecademy.com/Courses/Learn-WebSocket/PINK_COLD.png"></div>
+      <div class="player" id="YELLOW"><img class="playerAvatar" src="https://static-assets.codecademy.com/Courses/Learn-WebSocket/YELLOW_COLD.png"></div>
+    </div>
+  </div>
+  <script>
+    ////////////////////////////////////////////////
+    ////////////// VARIABLES ///////////////////////
+    ////////////////////////////////////////////////
+    
+    let wsClient = null;            // The client-side WebSocket connection variable: new WebSocket() 
+    let clientPlayerIndex = null;   // The index value of the client: 0 | 1 | 2 | 3
+    let potatoHolderIndex = null;   // The index value of the current holder of the potato: 0 | 1 | 2 | 3
+    
+    ////////////////////////////////////////////////
+    //////////// DOM SETUP /////////////////////////
+    ////////////////////////////////////////////////
+    
+    // Render the four players
+    const playerColors = ['BLUE', 'GREEN', 'PINK', 'YELLOW'];
+    const playerElements = [...document.getElementsByClassName('player')];
+
+    // make each other player clickable
+    playerElements.forEach((playerElement, playerIndex) => {
+      playerElement.onclick = function() {
+        // Only allow clicks if the game is running, the client is holding the potato, and they didn't click on themselves
+        if (clientPlayerIndex === potatoHolderIndex && clientPlayerIndex !== playerIndex ) {  
+          // and pass the potato
+          passThePotatoTo(playerIndex);
+        }
+      } 
+    });
+
+    ////////////////////////////////////////////////
+    ///////////////// WS LOGIC /////////////////////
+    ////////////////////////////////////////////////
+
+    function init() {
+      // if a WebSocket connection exists already, close it
+      if (wsClient) {
+        wsClient.onerror = wsClient.onopen = wsClient.onclose = null;
+        wsClient.close();
+      }
+
+      // TODO: Create a new WebSocket connection with the server using the ws protocol
+      const URL = 'ws://localhost:' + PORT;
+      wsClient = new WebSocket(URL);
+
+      // TODO: Define the .onopen() handler
+        // TODO: Send the server a 'NEW_USER' message
+      wsClient.onopen = () => {
+        console.log('Connected to the WebSocket server!');
+        const messageObj = {
+          type: CLIENT.MESSAGE.NEW_USER
+        };
+        wsClient.send(JSON.stringify(messageObj));
+      }
+
+      // TODO: Define the .onmessage() handler
+        // For each message type below, call the appropriate helper the proper value
+          // 'GAME_FULL' => updateDisplay(displayText);
+          // 'PLAYER_ASSIGNMENT' => setPlayerIndex(playerIndex)
+          // 'COUNTDOWN' => countDown(clockValue)
+          // 'NEW_POTATO_HOLDER' => updateCurrentPotatoHolder(newPotatoHolderIndex)
+          // 'GAME_OVER' => endGame()
+      wsClient.onmessage = (messageEvent) => {
+        const { type, payload } = JSON.parse(messageEvent.data)
+        switch(type) {
+          case SERVER.MESSAGE.GAME_FULL:
+            updateDisplay('The game is full :(')
+            break;
+          case SERVER.MESSAGE.PLAYER_ASSIGNMENT:
+            setPlayerIndex(payload.clientPlayerIndex);
+            break;
+          case SERVER.BROADCAST.NEW_POTATO_HOLDER:
+            updateCurrentPotatoHolder(payload.newPotatoHolderIndex);
+            break;
+          case SERVER.BROADCAST.COUNTDOWN:
+            countDown(payload.clockValue);
+            break;
+          case SERVER.BROADCAST.GAME_OVER:
+            endGame();
+            break;
+          default:
+            break;
+        }
+      }
+
+      // .onclose is executed when the socket connection is closed
+      wsClient.onclose = function() {
+        updateDisplay('No WebSocket connection');
+        wsClient = null;
+      }
+
+      // .onerror is executed when error event occurs on the WebSocket connection
+      wsClient.onerror = function(e) {
+        console.error("WebSocket error observed:", e);
+        wsClient = null;
+      }
+    }
+
+
+    // Sets the current potatoHolderIndex ands sends it to the server
+    function passThePotatoTo(newPotatoHolderIndex) { 
+      // set the potatoHolderIndex to be the player that was clicked on
+      potatoHolderIndex = newPotatoHolderIndex;
+      
+      // TODO: Send the server a 'PASS_POTATO' message with the newPotatoHolderIndex
+      const messageObj = {
+        type: CLIENT.MESSAGE.PASS_POTATO,
+        payload: { newPotatoHolderIndex }
+      }
+      wsClient.send(JSON.stringify(messageObj));
+
+    }
+
+    ////////////////////////////////////////////////
+    //////////// DOM HELPER FUNCTIONS //////////////
+    ////////////////////////////////////////////////
+    
+    const display = document.getElementById('display');
+
+    function updateDisplay(value, backgroundColor) {
+      display.innerHTML = value;
+      if (backgroundColor) {
+        display.style.background = backgroundColor;
+      }
+    }
+
+    // Assigns the client's player index and appends a star to their avatar indicating which player they are.
+    function setPlayerIndex(playerIndex) {
+      clientPlayerIndex = playerIndex;
+
+      // create the star and append the image to the proper player based on the playerIndex
+      const img = document.createElement('img');
+      img.src = `https://static-assets.codecademy.com/Courses/Learn-WebSocket/you_star.png`;
+      img.className = 'star';
+      playerElements[playerIndex].appendChild(img);
+    }
+    
+    // Updates the potatoHolderIndex value and sets each playerAvatar image to either be "HOT" or "COLD" accordingly
+    function updateCurrentPotatoHolder(newPotatoHolderIndex) {
+      // remove the hasPotato class from any existing elements that have it
+      potatoHolderIndex = newPotatoHolderIndex;
+      playerElements.forEach((playerElement, i) => {
+        const playerAvatar = playerElement.childNodes[0];
+        playerAvatar.src = i === potatoHolderIndex ? playerAvatar.src.replace('COLD', 'HOT') : playerAvatar.src.replace('HOT', 'COLD');
+      })
+    }
+
+    // Render the current time with a different color based on the time value
+    function countDown(time) {
+      let color = '#63fe34a1';
+      if (time <= 5) {
+        color = '#ff0000b5';
+      } else if (time <= 15) {
+        color = '#ff7800c7';
+      } else if (time <= 25) {
+        color = '#ffee00b5';
+      }
+      updateDisplay(time, color);
+    }
+
+    function endGame() {
+      if (potatoHolderIndex === clientPlayerIndex) {
+        updateDisplay('You Lose', '#ff0000b5');
+      } else {
+        updateDisplay('You Win!', '#63fe34a1');
+      }
+    }
+
+    // Start the WebSocket server
+    init();
+
+  </script>
+</body>
+</html>
