@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beat Mix</title>
+  <link rel="icon" type="image/png" href="public/img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="public/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="public/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+</head>
+<body>
+  <div id="logo">
+    <img src="public/img/logo.svg" />
+  </div>
+  <div id="app-container">
+    <div id="control-bar">
+      <div id="presets">
+        <div id="preset-buttons">
+          <div class="preset" id="preset-0"></div>
+          <div class="preset" id="preset-1"></div>
+          <div class="preset" id="preset-2"></div>
+          <div class="preset" id="preset-3"></div>
+        </div>
+        <div id="save-preset">Save Preset</div>
+      </div>
+      <div id="clear-all">Clear All</div>
+      <div id="play-controls">
+        <div id="play">
+          <img src="public/img/play.svg" alt="play">
+        </div>
+        <div id="stop"></div>
+        <div id="tempo-controls">
+          <div id="tempo-label">Tempo</div>
+          <div id="tempo-label-slider">
+            <input id="tempo-slider" type="range" min="40" max="220" value="120"/>
+            <div id="tempo">120</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator">
+      <hr>
+    </div>
+    <div>
+      <div id="drum-title" class="label">Drum Grid</div>
+      <div id="drum-section">
+        <div id="drum-grid" class="scroll"></div>
+        <div id="drum-button-grid"></div>
+      </div>
+    </div>
+    <div id="synth-grid" >
+      <div id="synth-title" class="label">Synth Grid</div>
+    </div>
+  </div>
+  <script type="text/javascript" src="public/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="public/js/audio.js"></script>
+  <script type="text/javascript" src="public/js/script.js"></script>
+  <script type="text/javascript" src="public/js/play-logic.js"></script>
+</body>
+</html>

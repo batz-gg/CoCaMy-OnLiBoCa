@@ -1,0 +1,22 @@
+{
+  "name": "build-apis-beat-mix",
+  "version": "1.0.0",
+  "description": "beat mix project from codecademy",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "codecademy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "^4.1.1",
+    "chai-things": "^0.2.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mocha": "^5.1.1",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0"
+  }
+}
